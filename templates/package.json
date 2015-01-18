@@ -1,0 +1,60 @@
+{
+  "name": "<%= projectNameSlug %>",
+  "description": "<%= projectDescription %>",
+  "version": "<%= projectVersion %>",
+  "homepage": "https://github.com/<%= userName %>/<%= projectNameSlug %>",
+  "author": {
+      "name": "<%= authorName %>",
+      "email": "<%= authorEmail %>"
+  },
+  "repository": {
+      "type": "git",
+      "url": "git://github.com/<%= userName %>/<%= projectNameSlug %>.git"
+  },
+  "bugs": {
+      "url": "https://github.com/<%= userName %>/<%= projectNameSlug %>/issues"
+  },
+  "licenses": [{
+      "type": "<%= license %>",
+      "url": "https://github.com/<%= userName %>/<%= projectNameSlug %>/blob/master/LICENSE"
+  }],
+  "main": "gulpfile.js",
+  "browserify": {
+    "transform": [
+      "coffeeify",
+      "jadeify"
+    ]
+  },
+  "devDependencies": {
+    "browser-sync": "1.x",
+    "browserify": "6.x",
+    "coffee-script": "^1.7.1",
+    "coffeeify": "1.x",
+    "gulp": "^3.8.6",
+    "gulp-autoprefixer": "2.x",
+    "gulp-clean": "^0.3.1",
+    "gulp-gzip": "0.0.8",
+    "gulp-imagemin": "2.x",
+    "gulp-jade": "0.x",
+    "gulp-minify-css": "~0.3.10",
+    "gulp-minify-html": "~0.1.5",
+    "gulp-rename": "~1.2.0",
+    "gulp-s3": "^0.3.0",
+    "gulp-sass": "1.x",
+    "gulp-sourcemaps": "^1.2.4",
+    "gulp-uglify": "~1.0.1",
+    "gulp-util": "^3.0.0",
+    "gulp-webserver": "0.x",
+    "imagemin-pngcrush": "4.x",
+    "jade": "^1.7.0",
+    "jadeify": "4.x",
+    "merge-stream": "~0.1.6",
+    "node-bourbon": "~1.2.3",
+    "node-neat": "~1.x",
+    "require-dir": "^0.1.0",
+    "vinyl-source-stream": "^1.0.0",
+    "watchify": "2.x",
+    "gulp-notify": "^2.1.0",
+    "gulp-plumber": "^0.6.6"
+  }
+}
