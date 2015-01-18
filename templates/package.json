@@ -26,6 +26,10 @@
     ]
   },
   "devDependencies": {
+    <% if (projectCss === 'bourbon/neat') { %>
+    "node-bourbon": "~1.2.3",
+    "node-neat": "~1.x",
+    <% } %>
     "browser-sync": "1.x",
     "browserify": "6.x",
     "coffee-script": "^1.7.1",
@@ -49,8 +53,6 @@
     "jade": "^1.7.0",
     "jadeify": "4.x",
     "merge-stream": "~0.1.6",
-    "node-bourbon": "~1.2.3",
-    "node-neat": "~1.x",
     "require-dir": "^0.1.0",
     "vinyl-source-stream": "^1.0.0",
     "watchify": "2.x",

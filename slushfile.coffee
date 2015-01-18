@@ -13,7 +13,8 @@ install   = require("gulp-install")
 conflict  = require("gulp-conflict")
 template  = require("gulp-template")
 rename    = require("gulp-rename")
-_         = require("underscore.string")
+_string   = require("underscore.string")
+_         = require("lodash")
 inquirer  = require("inquirer")
 merge     = require("merge-stream")
 
@@ -37,6 +38,7 @@ defaults = (->
   s3Secret:       'acYxWRu5RRa6CwzQuhdXEfTpbQA+1XQJ7Z1bGTCx'
   s3Bucket:       'dev.example.com'
   s3Region:       'us-east-1'
+  projectCss:     'bourbon/neat'
 )()
 
 
@@ -58,10 +60,10 @@ gulp.task "default", (done) ->
     }
     {
       type: "list"
-      name: "projectStyles"
+      name: "projectCss"
       message: "What do you want to use as a base for styling?"
       choices: ['bourbon/neat', 'bootstrap']
-      default: 'bourbon/neat'
+      default: defaults.projectCss
     }
     {
       name: "authorName"
@@ -86,24 +88,28 @@ gulp.task "default", (done) ->
       type: "input"
       name: "s3Key"
       message: "What is your s3 key?"
+      default: defaults.s3Key
       when: (answers) -> return answers.useS3
     }
     {
       type: "input"
       name: "s3Secret"
       message: "What is your s3 secret key?"
+      default: defaults.s3Secret
       when: (answers) -> return answers.useS3
     }
     {
       type: "input"
       name: "s3Bucket"
       message: "What is the name of your s3 bucket?"
+      default: defaults.s3Bucket
       when: (answers) -> return answers.useS3
     }
     {
       type: "input"
       name: "s3Region"
-      message: "What is the bucket's region? (e.g. us-east-1)"
+      message: "What is the bucket's region?"
+      default: defaults.s3Region
       when: (answers) -> return answers.useS3
     }
     {
@@ -124,12 +130,12 @@ gulp.task "default", (done) ->
 
     return done()  unless answers.moveon
 
-    answers.projectNameSlug = _.slugify(answers.projectName)
+    answers = _.extend defaults, answers 
+
+    answers.projectNameSlug = _string.slugify(answers.projectName)
     gulp.src([__dirname + "/templates/**"])
     .pipe(template(answers)).pipe(rename((file) ->
       file.basename = "." + file.basename.slice(1)  if file.basename[0] is "_" and file.basename[1] isnt "_"
       file.basename = "_" + file.basename.slice(2)  if file.basename[0] is "_" and file.basename[1] is "_"
       return
     )).pipe(conflict("./")).pipe(gulp.dest("./")).pipe(install()).on "end", done
-
-
