@@ -3,5 +3,6 @@ dist/
 *.css.map
 node_modules/
 aws.json
-site/vendor/
+src/vendor/
 .sass-cache
+*.log

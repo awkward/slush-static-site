@@ -2,22 +2,22 @@
   "name": "slush-static-site",
   "description": "A generator for static websites",
   "version": "0.1.0",
-  "homepage": "https://github.com/jchn/slush-static-site",
+  "homepage": "https://github.com/awkward/slush-static-site",
   "author": {
     "name": "John van de Water",
-    "email": "john.vd.water85@gmail.com"
+    "email": "john@madeawkward.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jchn/slush-static-site.git"
+    "url": "git://github.com/awkward/slush-static-site.git"
   },
   "bugs": {
-    "url": "https://github.com/jchn/slush-static-site/issues"
+    "url": "https://github.com/awkward/slush-static-site/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/jchn/slush-static-site/blob/master/LICENSE"
+      "url": "https://github.com/awkward/slush-static-site/blob/master/LICENSE"
     }
   ],
   "main": "slushfile.js",
@@ -44,6 +44,6 @@
     "underscore.string": "^2.3.3"
   },
   "keywords": [
-    "slushgenerator"
+    "slushgenerator", "static", "site", "website", "bootstrap", "bourbon", "sass", "jade", "coffeescript"
   ]
 }

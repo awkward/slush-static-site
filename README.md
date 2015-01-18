@@ -1,4 +1,4 @@
-# static-site [![Build Status](https://secure.travis-ci.org/jchn/slush-static-site.png?branch=master)](https://travis-ci.org/jchn/slush-static-site) [![NPM version](https://badge-me.herokuapp.com/api/npm/slush-static-site.png)](http://badges.enytc.com/for/npm/slush-static-site)
+# static-site [![Build Status](https://secure.travis-ci.org/awkward/slush-static-site.png?branch=master)](https://travis-ci.org/awkward/slush-static-site) [![NPM version](https://badge-me.herokuapp.com/api/npm/slush-static-site.png)](http://badges.enytc.com/for/npm/slush-static-site)
 
 > A generator for static websites
 
@@ -35,16 +35,16 @@ To find out more about Slush, check out the [documentation](https://github.com/k
 
 ## Contributing
 
-See the [CONTRIBUTING Guidelines](https://github.com/jchn/slush-static-site/blob/master/CONTRIBUTING.md)
+See the [CONTRIBUTING Guidelines](https://github.com/awkward/slush-static-site/blob/master/CONTRIBUTING.md)
 
 ## Support
-If you have any problem or suggestion please open an issue [here](https://github.com/jchn/slush-static-site/issues).
+If you have any problem or suggestion please open an issue [here](https://github.com/awkward/slush-static-site/issues).
 
 ## License 
 
 The MIT License
 
-Copyright (c) 2015, John van de Water
+Copyright (c) 2015, Awkward
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
