@@ -1,12 +1,11 @@
 {
-  "name": "nodes",
-  "version": "0.0.1",
+  "name": "<%= projectName %>",
+  "version": "<%= projectVersion %>",
   "authors": [
-    "John van de Water <john.vd.water85@gmail.com>",
-    "Floris Verloop <floris@madeawkward.com>"
+    "<%= authorName %> <<%= authorEmail %>>",
   ],
   "main": "index.js",
-  "license": "MIT",
+  "license": "<%= license %>",
   "private": true,
   "ignore": [
     "**/.*",
