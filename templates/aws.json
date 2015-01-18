@@ -1,0 +1,6 @@
+{
+  "key": "<%= s3Key %>",
+  "secret": "<%= s3Secret %>",
+  "bucket": "<%= s3Bucket %>",
+  "region": "<%= s3Region %>"
+}
