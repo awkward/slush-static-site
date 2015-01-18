@@ -33,10 +33,12 @@ defaults = (->
   userName:       format(user.name) or osUserName
   authorEmail:    user.email or ""
   license:        'MIT'
+  s3Key:          'AKIAI3Z7CUAFHG53DMJA'
+  s3Secret:       'acYxWRu5RRa6CwzQuhdXEfTpbQA+1XQJ7Z1bGTCx'
+  s3Bucket:       'dev.example.com'
+  s3Region:       'us-east-1'
 )()
 
-
-gulp.task "copy", ->
 
 gulp.task "default", (done) ->
   prompts = [
@@ -55,6 +57,13 @@ gulp.task "default", (done) ->
       default: "0.1.0"
     }
     {
+      type: "list"
+      name: "projectStyles"
+      message: "What do you want to use as a base for styling?"
+      choices: ['bourbon/neat', 'bootstrap']
+      default: 'bourbon/neat'
+    }
+    {
       name: "authorName"
       message: "What is the author name?"
     }
@@ -69,6 +78,35 @@ gulp.task "default", (done) ->
       default: defaults.userName
     }
     {
+      type: "confirm"
+      name: "useS3"
+      message: "do you want to enter your s3 credentials for deployment?"
+    }
+    {
+      type: "input"
+      name: "s3Key"
+      message: "What is your s3 key?"
+      when: (answers) -> return answers.useS3
+    }
+    {
+      type: "input"
+      name: "s3Secret"
+      message: "What is your s3 secret key?"
+      when: (answers) -> return answers.useS3
+    }
+    {
+      type: "input"
+      name: "s3Bucket"
+      message: "What is the name of your s3 bucket?"
+      when: (answers) -> return answers.useS3
+    }
+    {
+      type: "input"
+      name: "s3Region"
+      message: "What is the bucket's region? (e.g. us-east-1)"
+      when: (answers) -> return answers.useS3
+    }
+    {
       name: "license"
       message: "What is the license?"
       default: defaults.license
@@ -80,6 +118,7 @@ gulp.task "default", (done) ->
     }
   ]
   
+
   #Ask
   inquirer.prompt prompts, (answers) ->
 
