@@ -5,6 +5,6 @@
  * Copyright (c) 2015, John van de Water
  * Licensed under the MIT license.
  */
-console.log("hi");
+
 require('coffee-script/register');
 require('./slushfile.coffee')

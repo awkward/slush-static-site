@@ -135,7 +135,9 @@ gulp.task "default", (done) ->
     answers.projectNameSlug = _string.slugify(answers.projectName)
     gulp.src([__dirname + "/templates/**"])
     .pipe(template(answers)).pipe(rename((file) ->
-      file.basename = "." + file.basename.slice(1)  if file.basename[0] is "_" and file.basename[1] isnt "_"
+
+      file.basename = "." + file.basename.slice(1)  if file.basename[0] is "_" and file.dirname is "."
       file.basename = "_" + file.basename.slice(2)  if file.basename[0] is "_" and file.basename[1] is "_"
+
       return
     )).pipe(conflict("./")).pipe(gulp.dest("./")).pipe(install()).on "end", done
