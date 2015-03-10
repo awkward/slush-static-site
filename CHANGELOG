@@ -1,4 +1,9 @@
-v0.1.0:
-  date: 2015-0-17
+v0.1.2
+  date: 2015-3-10
+  changes:
+    - Remove jQuery in favour of querySelectorAll
+    - Add variables to jade templates for meta data
+v0.1.1:
+  date: 2015-1-17
   changes:
     - Initial release.

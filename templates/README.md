@@ -1,7 +1,7 @@
-webdev-boilerplate
+<%= projectName %>
 ==================
 
-Boilerplate for setting up a site using gulp, coffeescript, sass and jade
+<%= projectDescription %>
 
 #### Quick start:
 
@@ -11,7 +11,7 @@ Boilerplate for setting up a site using gulp, coffeescript, sass and jade
 3. `bower install`
 4. `gulp`
 
-After these steps you'll have a basic project set up with browsersync. Everything gets compiled and placed in the `build` directory.
+After these steps you'll have the project running. Everything gets compiled and placed in the `build` directory.
 
 ### Build
 

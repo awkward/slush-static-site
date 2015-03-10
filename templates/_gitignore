@@ -1,6 +1,6 @@
 build/
 dist/
-*.css.map
+*.map
 node_modules/
 aws.json
 src/vendor/

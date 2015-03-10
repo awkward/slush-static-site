@@ -1,1 +1,1 @@
-$ = require '../vendor/jquery/dist/jquery'
+$ = document.querySelectorAll.bind(document)

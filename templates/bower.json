@@ -15,7 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.0",
     <% if (projectCss === 'bourbon/neat') { %>
     "normalize-scss": "~3.0.1"
     <% } else if (projectCss === 'bootstrap') { %>
