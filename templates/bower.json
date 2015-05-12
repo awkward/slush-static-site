@@ -16,9 +16,9 @@
   ],
   "dependencies": {
     <% if (projectCss === 'bourbon/neat') { %>
-    "normalize-scss": "~3.0.1"
+    "normalize-scss": "~3.0.3"
     <% } else if (projectCss === 'bootstrap') { %>
-    "bootstrap-sass": "~3.3.1"
+    "bootstrap-sass": "~3.3.4"
     <% } else {} %>
   }
 }
