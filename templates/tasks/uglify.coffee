@@ -2,7 +2,6 @@ gulp          = require 'gulp'
 uglify        = require 'gulp-uglify'
 imagemin      = require 'gulp-imagemin'
 pngcrush      = require 'imagemin-pngcrush'
-gzip          = require 'gulp-gzip'
 minifyCSS     = require 'gulp-minify-css'
 minifyHTML    = require 'gulp-minify-html'
 autoprefixer  = require 'gulp-autoprefixer'
@@ -12,7 +11,6 @@ gulp.task 'uglify', ['build'], ->
 
   js = gulp.src('build/**/*.js')
     .pipe(uglify())
-    # .pipe(gzip())
     .pipe(gulp.dest('dist'))
 
   css = gulp.src('build/**/*.css')
@@ -21,7 +19,6 @@ gulp.task 'uglify', ['build'], ->
       cascade: false
     ))
     .pipe(minifyCSS())
-    # .pipe(gzip())
     .pipe(gulp.dest('dist'))
 
   html = gulp.src('build/**/*.html')
