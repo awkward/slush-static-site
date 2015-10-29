@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import loadPlugins from 'gulp-load-plugins';
 import pngcrush from 'imagemin-pngcrush';
 import merge from 'merge-stream';
+import csswring from 'csswring';
 
 const plugins = loadPlugins({
   rename: {
@@ -17,7 +18,7 @@ gulp.task('uglify', () => {
     .pipe(gulp.dest('dist'));
 
   const css = gulp.src('build/**/*.css')
-    .pipe(plugins.minifyCSS())
+    .pipe(plugins.postcss([csswring]))
     .pipe(gulp.dest('dist'));
 
   const html = gulp.src('build/**/*.html')

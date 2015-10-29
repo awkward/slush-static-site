@@ -14,7 +14,7 @@ gulp.task('browserify', () => {
     let bundler = browserify({
       cache: {}, packageCache: {}, fullPaths: true,
       entries: './src/scripts/main.js',
-      extensions: ['.js', '.jade'],
+      extensions: ['.js'],
       debug: true
     });
 
