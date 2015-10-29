@@ -25,6 +25,13 @@
       "jadeify"
     ]
   },
+  "dependencies": {
+    <% if (projectCss === 'bourbon/neat') { %>
+    "normalize.css": "^3.0.3"
+    <% } else { %>
+      // TODO: Add bootstrap
+    <% } %>
+  },
   "devDependencies": {
     <% if (projectCss === 'bourbon/neat') { %>
     "node-bourbon": "~4.2.2",
