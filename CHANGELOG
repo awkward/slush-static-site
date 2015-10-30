@@ -1,7 +1,9 @@
 ### v0.2.0
-  date: 2015-10-29
+  date: tba
   changes:
     - Remove CoffeeScript in favour of Babel
+    - Updated folder structure
+    - Only use npm as default package manager
     - Update all dependencies
 ### v0.1.2
   date: 2015-3-10
