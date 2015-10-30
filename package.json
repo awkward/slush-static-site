@@ -22,26 +22,24 @@
   ],
   "main": "slushfile.js",
   "engines": {
-    "node": ">= 0.10.26",
-    "npm": ">=1.4.3"
+    "node": ">= 4.2.0",
+    "npm": ">=2.4.0"
   },
   "scripts": {
     "test": "echo \"No tests\""
   },
   "dependencies": {
-    "coffee-script": "^1.9.2",
-    "gulp": "^3.6.2",
-    "gulp-conflict": "^0.1.1",
-    "gulp-ignore": "^1.2.1",
-    "gulp-install": "^0.1.4",
+    "babel": "^5.8.29",
+    "gulp": "^3.9.0",
+    "gulp-conflict": "^0.4.0",
+    "gulp-ignore": "^2.0.1",
+    "gulp-install": "^0.6.0",
     "gulp-rename": "^1.2.2",
-    "gulp-template": "^0.1.1",
+    "gulp-template": "^3.0.0",
     "iniparser": "^1.0.5",
-    "inquirer": "^0.4.1",
-    "lodash": "^2.4.2",
-    "merge-stream": "^0.1.7",
+    "inquirer": "^0.11.0",
     "slush": "^1.1.1",
-    "underscore.string": "^2.3.3"
+    "underscore.string": "^3.2.2"
   },
   "keywords": [
     "slushgenerator",

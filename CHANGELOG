@@ -1,9 +1,16 @@
-v0.1.2
+### v0.2.0
+  date: tba
+  changes:
+    - Remove CoffeeScript in favour of Babel
+    - Updated folder structure
+    - Only use npm as default package manager
+    - Update all dependencies
+### v0.1.2
   date: 2015-3-10
   changes:
     - Remove jQuery in favour of querySelectorAll
     - Add variables to jade templates for meta data
-v0.1.1:
+### v0.1.1:
   date: 2015-1-17
   changes:
     - Initial release.
